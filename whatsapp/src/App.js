@@ -1,26 +1,19 @@
-import React from 'react';
-import InputsMensagens from './components/InputsMensagens/InputsMensagens';
-import './App.css';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import Mensagens from "./components/Mensagens/Mensagens";
+import "./App.css";
+import styled from "styled-components";
 
-const Conteudo = styled.div`
-    display: flex;
-    width: 50%;
-    height: 100vh;
-    border: 1px solid black;
-`
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
-
-function App() {
-  return (
-    <div className="container" >
-      <Conteudo>
-        <InputsMensagens />
-      </Conteudo>
-
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <Container>
+        <Mensagens />
+      </Container>
+    );
+  }
 }
-
-
-export default App;
